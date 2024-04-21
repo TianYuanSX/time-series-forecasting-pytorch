@@ -45,6 +45,6 @@ xticks = [data_date[i] if ((i%config["plots"]["xticks_interval"]==0 and (num_dat
 x = np.arange(0,len(xticks))
 plt.xticks(x, xticks, rotation='vertical')
 plt.title("Daily close prices for " + config["alpha_vantage"]["symbol"] + " - showing training and validation data")
-plt.grid(b=None, which='major', axis='y', linestyle='--')
+plt.grid(which='major', axis='y', linestyle='--')
 plt.legend()
 plt.show()

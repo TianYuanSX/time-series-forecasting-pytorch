@@ -47,6 +47,6 @@ plt.title("Compare predicted prices to actual prices")
 xticks = [data_date[i] if ((i%config["plots"]["xticks_interval"]==0 and (num_data_points-i) > config["plots"]["xticks_interval"]) or i==num_data_points-1) else None for i in range(num_data_points)] # make x ticks nice
 x = np.arange(0,len(xticks))
 plt.xticks(x, xticks, rotation='vertical')
-plt.grid(b=None, which='major', axis='y', linestyle='--')
+plt.grid(which='major', axis='y', linestyle='--')
 plt.legend()
 plt.show()

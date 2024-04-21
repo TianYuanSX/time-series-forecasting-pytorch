@@ -33,7 +33,7 @@ plt.plot(plot_date_test, to_plot_data_y_val, label="Actual prices", marker=".", 
 plt.plot(plot_date_test, to_plot_data_y_val_pred, label="Past predicted prices", marker=".", markersize=10, color=config["plots"]["color_pred_val"])
 plt.plot(plot_date_test, to_plot_data_y_test_pred, label="Predicted price for next day", marker=".", markersize=20, color=config["plots"]["color_pred_test"])
 plt.title("Predicted close price of the next trading day")
-plt.grid(b=None, which='major', axis='y', linestyle='--')
+plt.grid(which='major', axis='y', linestyle='--')
 plt.legend()
 plt.show()
 

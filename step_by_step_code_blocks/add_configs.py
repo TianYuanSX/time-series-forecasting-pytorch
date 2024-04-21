@@ -3,7 +3,7 @@ config = {
         "key": "YOUR_API_KEY", # Claim your free API key here: https://www.alphavantage.co/support/#api-key
         "symbol": "IBM",
         "outputsize": "full",
-        "key_adjusted_close": "5. adjusted close",
+        "key_close_price": "4. close",
     },
     "data": {
         "window_size": 20,

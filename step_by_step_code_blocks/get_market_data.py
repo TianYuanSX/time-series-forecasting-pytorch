@@ -1,11 +1,11 @@
 def download_data(config):
     ts = TimeSeries(key=config["alpha_vantage"]["key"])
-    data, meta_data = ts.get_daily_adjusted(config["alpha_vantage"]["symbol"], outputsize=config["alpha_vantage"]["outputsize"])
+    data, meta_data = ts.get_daily(config["alpha_vantage"]["symbol"], outputsize=config["alpha_vantage"]["outputsize"])
 
     data_date = [date for date in data.keys()]
     data_date.reverse()
 
-    data_close_price = [float(data[date][config["alpha_vantage"]["key_adjusted_close"]]) for date in data.keys()]
+    data_close_price = [float(data[date][config["alpha_vantage"]["key_close_price"]]) for date in data.keys()]
     data_close_price.reverse()
     data_close_price = np.array(data_close_price)
 
